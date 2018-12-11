@@ -55,18 +55,7 @@ for(var x =0; x < map.length; x++){
       prizes.appendChild(prize)
       prize.setAttribute('position', position)
       prize.setAttribute('class', 'prize')
-      // document.querySelector('#llave').addEventListener('loaded', function() {
-      //   // Cuando el asset este cargado agregamos a el primer elemento Premio a-animation
 
-      //   arregloPremios[0].appendChild(prizeAnimation)
-      
-      //   prizeAnimation.setAttribute('attribute', 'rotation')
-      //   prizeAnimation.setAttribute('from', '0 -30 0')
-      //   prizeAnimation.setAttribute('to', '0 330 0')
-      //   prizeAnimation.setAttribute('dur', '8000')
-      //   prizeAnimation.setAttribute('easing', 'linear')
-      //   prizeAnimation.setAttribute('repeat', 'indefinite')
-      // })
     }
   }
 }
@@ -74,13 +63,6 @@ for(var x =0; x < map.length; x++){
 var arrayPrizes = Array.from(document.querySelectorAll('.prize'))
 var scoreToWin = 0
 
-// document.onkeydown = function(e) {
-//   // Fuera del modo vr denemos el sonido de los pasos si usamos WASD
-  
-//   if (e.keyCode == 65 || e.keyCode == 87 || e.keyCode == 68 || e.keyCode == 83) {
-//         stepSound.components.sound.stopSound()
-//   }
-// }
 
 document.onkeydown = function(e) {
   if (e.keyCode == 65 || e.keyCode == 87 || e.keyCode == 68 || e.keyCode == 83) {
