@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>  Control not working-->
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.6/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene false fog="type: exponential; color: #2A324C; density: 0.4;">
+      <a-assets>
+        <!-- <img src="https://ucarecdn.com/0a1bf685-f508-4483-b33a-e85813381253/" id="floor" /> -->
+        <img src="assets/images/floor.png" id="floor" />
+        <img src="assets/images/wall3.jpg" id="wall" />
+        <audio src="assets/sounds/steps.wav" id="soundStep"></audio>
+        <audio src="assets/sounds/voices.mp3" id="soundAmbient" autoplay=""></audio>
+      </a-assets>
+
+      <a-entity id="player" camera universal-controls kinematic-body position="0 1.6 0">
+          <a-cursor postion="0 0 -1" fuse="true" fuse-timeout="800"
+          geometry="primitive: ring; radiusOuter: 0.033; radiusInner: 0.020;"  material="color: #f6ce30; shader: flat"> </a-cursor>
+      </a-entity>
+      <a-sound src="#soundStep" id="stepSound" volume="3.8"></a-sound>
+      <a-sound src="#soundAmbient" autoplay="true" loop="true" volume="2.5"></a-sound>
+
+      <a-entity id="walls"></a-entity>
+      <a-entity id="prizes"></a-entity>
+      <a-sky color="lightblue"></a-sky>
+      <a-grid src="#floor" static-body></a-grid>
+    </a-scene>
+    <script src="index.js"></script>
+  </body>
+</html>
